@@ -48,7 +48,8 @@ const handleSubmit = async (e) => {
     return;
     }
     try {
-    const res = await axios.post("http://localhost:8000/score", form);
+        const res = axios.post("https://ai-lead-intent-score-assignment-backend.onrender.com/score", form);
+
     onSubmit(res.data);
     alert("Lead scored successfully!");
     } catch (error) {
